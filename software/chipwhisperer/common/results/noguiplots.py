@@ -196,10 +196,9 @@ class NoGUIPlots(object):
 
         if bnum_it is None:
             bnum_it = range(16)
-
         curve = None
         for bnum in bnum_it:
-            data = np.array(self.corr_vs_trace(bnum))[1]
+            data = np.array(self.corr_vs_trace(bnum)[1])
             xrangelist = self.corr_vs_trace(bnum)[0]
             key = self._results.known_key[bnum]
             wrong_results = data[[i != key for i in range(256)]]

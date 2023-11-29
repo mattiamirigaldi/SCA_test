@@ -263,6 +263,7 @@ class CW305(TargetTemplate, ChipWhispererCommonInterface):
         Returns:
             Requested data as a list
         """
+        print("addr "+str(addr))
         if readlen <= 0:
             raise ValueError("Invalid read len {}".format(readlen))
         addr = addr << self.bytecount_size
